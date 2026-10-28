@@ -4,10 +4,6 @@ Pipeline de Engenharia de Dados e Business Intelligence para apoiar a análise d
 
 O projeto conecta dados operacionais em PostgreSQL a uma arquitetura Medalhão no Databricks e disponibiliza a camada analítica no Qlik Sense.
 
-<p align="center">
-  <img src="assets/images/qlik/visao-geral.png" width="100%" alt="Dashboard Inventra no Qlik Sense">
-</p>
-
 ## Visão geral
 
 O projeto foi desenvolvido para transformar registros operacionais do Inventra em informações gerenciais que permitam investigar questões como:
