@@ -1,0 +1,241 @@
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='R$ #.##0,00;-R$ #.##0,00';
+SET TimeFormat='hh:mm:ss';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='pt-BR';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Fev;Mar;Abr;Mai;Jun;Jul;Ago;Set;Out;Nov;Dez';
+SET LongMonthNames='Janeiro;Fevereiro;Março;Abril;Maio;Junho;Julho;Agosto;Setembro;Outubro;Novembro;Dezembro';
+SET DayNames='Seg;Ter;Qua;Qui;Sex;Sáb;Dom';
+SET LongDayNames='Segunda-feira;Terça-feira;Quarta-feira;Quinta-feira;Sexta-feira;Sábado;Domingo';
+LET vDataAtual = Today();
+
+
+
+LIB CONNECT TO 'Databricks_Inventra';
+
+
+// ============================================================
+// COZINHAS
+// ============================================================
+
+[Cozinhas]:
+LOAD
+      nCdCozinha
+    , cNmCozinha
+    , nCdCozinhaOperacional
+    , cEnderecoCozinha
+    , cFlgCozinhaAtiva
+    , dDataCriacaoCozinha
+;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_cozinhas;
+
+
+// ============================================================
+// PERFIS
+// ============================================================
+
+[Perfis]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_perfis;
+
+
+// ============================================================
+// CATEGORIAS
+// ============================================================
+
+[Categorias]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_categorias;
+
+
+// ============================================================
+// UNIDADES DE MEDIDA
+// ============================================================
+
+[Unidades de Medida]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_unidades_medida;
+
+
+// ============================================================
+// USUÁRIOS
+// ============================================================
+
+[Usuários]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_usuarios;
+
+
+// ============================================================
+// FORNECEDORES
+// ============================================================
+
+[Fornecedores]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_fornecedores;
+
+
+// ============================================================
+// PRODUTOS
+// ============================================================
+
+[Produtos]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_produtos;
+
+
+// ============================================================
+// PRODUTOS X FORNECEDORES
+// ============================================================
+
+[Produtos x Fornecedores]:
+LOAD
+      Key_Produto_Fornecedor As [%Key_Produto_Fornecedor]
+    , nCdProdutoFornecedor
+    , nValorPrecoReferencia
+    , nQtdeDiasPrazoEntrega
+    , cFlgPrazoValido
+;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_produtos_fornecedores;
+
+
+// ============================================================
+// PARÂMETROS PRODUTO X COZINHA
+// ============================================================
+
+[Parâmetros Produto x Cozinha]:
+LOAD
+      Key_Produto_Cozinha As [%Key_Produto_Cozinha]
+    , nQtdeEstoqueMinimo
+    , nQtdeEstoqueMaximo
+    , nQtdeConsumoMedioDiario
+    , nQtdeSaldoTotal
+    , nCoberturaMinimo
+    , cFlgAbaixoMinimo
+    , cFlgAcimaMaximo
+;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_parametros_produto_cozinha;
+
+
+// ============================================================
+// LOTES DE ESTOQUE
+// ============================================================
+
+[Lotes de Estoque]:
+LOAD
+      nCdLote
+    , nCdProduto
+    , nCdCozinha
+    , nCdFornecedor
+    , Key_Produto_Fornecedor As [%Key_Produto_Fornecedor]
+    , Key_Produto_Cozinha As [%Key_Produto_Cozinha]
+    , nCdLoteFornecedor
+    , nCdNotaFiscal
+    , nQtdeInicial
+    , nQtdeAtual
+    , dDataEntrada
+    , dDataVencimento
+    , nValorPrecoUnitario
+    , cStatusLote
+    , nValorEstoqueAtual
+    , nValorEntrada
+    , cFlgComSaldo
+    , cFlgVencido
+    , cFlgVence7Dias
+;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_lotes_estoque;
+
+
+// ============================================================
+// REQUISIÇÕES
+// ============================================================
+
+[Requisições]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_requisicoes;
+
+
+// ============================================================
+// ITENS DAS REQUISIÇÕES
+// ============================================================
+
+[Itens das Requisições]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_itens_requisicoes;
+
+
+// ============================================================
+// INVENTÁRIOS
+// ============================================================
+
+[Inventários]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_inventarios;
+
+
+// ============================================================
+// CONTAGENS DE INVENTÁRIO
+// ============================================================
+
+[Contagens de Inventário]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_contagens_inventario;
+
+
+// ============================================================
+// ALERTAS
+// ============================================================
+
+[Alertas]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_alertas;
+
+
+// ============================================================
+// CALENDÁRIO MESTRE
+// ============================================================
+
+[Calendário Mestre]:
+LOAD *;
+
+SQL SELECT *
+FROM inventra.inventra_gold.gld_calendario_mestre;
