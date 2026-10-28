@@ -4,8 +4,6 @@ ________________pt-BR________________
 
 Projeto de **Engenharia de Dados e Business Intelligence** desenvolvido para transformar dados operacionais do Inventra em informações gerenciais sobre estoque, validade, compras, fornecedores e inventários.
 
-![Dashboard Inventra](assets/images/qlik/visao-geral.png)
-
 ## Sobre o projeto
 
 O Inventra é uma solução voltada à gestão de estoque de cozinhas industriais.
@@ -103,8 +101,6 @@ ________________en-US________________
 # Inventra Business Intelligence
 
 A **Data Engineering and Business Intelligence** project designed to transform Inventra's operational data into management insights about inventory, expiration dates, purchasing, suppliers, and inventory audits.
-
-![Inventra Dashboard](assets/images/qlik/visao-geral.png)
 
 ## About the Project
 
