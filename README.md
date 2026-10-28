@@ -62,7 +62,7 @@ O processamento é realizado pelo:
 `Pipeline_Inventra_Medalhao`
 
 <p align="center">
-  <img src="assets/images/databricks/pipeline-dag.png" width="95%" alt="Pipeline Medalhão do Inventra no Databricks">
+  <img src="images/databricks/pipeline-dag.png" width="95%" alt="Pipeline Medalhão do Inventra no Databricks">
 </p>
 
 Entre os tratamentos documentados estão:
@@ -90,7 +90,7 @@ com a task:
 A task executa o `Pipeline_Inventra_Medalhao` utilizando atualização completa.
 
 <p align="center">
-  <img src="assets/images/databricks/job-history.png" width="95%" alt="Histórico do Job do Inventra">
+  <img src="images/databricks/job-history.png" width="95%" alt="Histórico do Job do Inventra">
 </p>
 
 As evidências do projeto mostram execuções manuais e programadas concluídas com sucesso.
@@ -113,7 +113,7 @@ FROM inventra.inventra_gold.gld_perfis;
 ```
 
 <p align="center">
-  <img src="assets/images/qlik/data-load-editor.png" width="95%" alt="Integração Databricks e Qlik Sense">
+  <img src="images/qliksense/data-load-editor.png" width="95%" alt="Integração Databricks e Qlik Sense">
 </p>
 
 Detalhes sensíveis da conexão, como credenciais e endpoint, não são armazenados neste repositório.
@@ -143,7 +143,7 @@ Principais análises:
 - entradas registradas por período.
 
 <p align="center">
-  <img src="assets/images/qlik/visao-geral.png" width="95%" alt="Visão geral do dashboard Inventra">
+  <img src="images/qliksense/visao-geral.png" width="95%" alt="Visão geral do dashboard Inventra">
 </p>
 
 ---
@@ -162,7 +162,7 @@ Entre os objetos apresentados estão:
 - detalhamento dos lotes e quantidades.
 
 <p align="center">
-  <img src="assets/images/qlik/estoque-validade.png" width="95%" alt="Estoque e validade do Inventra">
+  <img src="images/qliksense/estoque-validade.png" width="95%" alt="Estoque e validade do Inventra">
 </p>
 
 ---
@@ -183,7 +183,7 @@ Principais análises:
 - relação entre preço de referência e prazo de entrega.
 
 <p align="center">
-  <img src="assets/images/qlik/compras-fornecedores.png" width="95%" alt="Compras e fornecedores do Inventra">
+  <img src="images/qliksense/compras-fornecedores.png" width="95%" alt="Compras e fornecedores do Inventra">
 </p>
 
 ---
@@ -203,7 +203,7 @@ Principais análises:
 - detalhamento das contagens.
 
 <p align="center">
-  <img src="assets/images/qlik/inventario-alertas-controle.png" width="95%" alt="Inventário, alertas e controle">
+  <img src="images/qliksense/inventario-alertas-controle.png" width="95%" alt="Inventário, alertas e controle">
 </p>
 
 ---
